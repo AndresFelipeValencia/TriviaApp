@@ -6,4 +6,14 @@
     <string name="question_one">Question One</string>
     <string name="end_game">End Game</string>
     <string name="button_continue">Continue</string>
+    <string name="title_message">Gracias por participar</string>
+    <string name="accumulated_points">Sus puntos acumulados son: #</string>
+    <string name="name_player">Ingrese su nombre: </string>
+    <string name="save_data">Save Data</string>
+    <string name="response_validation">Tu respuesta ha sido correcta</string>
+    <string name="wrong_answer">Tu respuesta ha sido incorrecta</string>
+    <string name="zero_points">Pierdes todos los puntos acumulados</string>
+    <string name="game_completed">Felicidades haz completado todos los niveles</string>
+    <string name="consult_players">Los jugadores registrados y sus puntos son: </string>
+    <string name="button_return">To Return</string>
 </resources>

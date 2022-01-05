@@ -18,6 +18,7 @@ class MainActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.register.setOnClickListener {
+            startActivity(Intent(this, ConsultRegisterActivity::class.java))
         }
 
         binding.start.setOnClickListener {

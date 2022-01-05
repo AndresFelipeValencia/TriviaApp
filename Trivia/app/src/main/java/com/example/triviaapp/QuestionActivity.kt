@@ -1,5 +1,6 @@
 package com.example.triviaapp
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.RadioButton
@@ -20,11 +21,11 @@ class QuestionActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.endGame.setOnClickListener {
+            startActivity(Intent(this, EndGameActivity::class.java))
         }
 
         binding.buttonContinue.setOnClickListener {
         }
-
 
     }
 }
