@@ -2,7 +2,10 @@ package com.example.triviaapp.data
 
 import com.example.triviaapp.model.Category
 import com.example.triviaapp.model.Option
+import com.example.triviaapp.model.Player
 import com.example.triviaapp.model.Question
+
+var listPlayer: MutableList<Player> = mutableListOf()
 
 val listQuestion: List<Question> = mutableListOf(
     Question(Category.POLITICS, "Cual es el presidente actual de Colombia",

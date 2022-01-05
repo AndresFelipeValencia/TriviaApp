@@ -3,8 +3,11 @@ package com.example.triviaapp
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.widget.Button
+import androidx.recyclerview.widget.RecyclerView
+import com.example.triviaapp.adapter.ItemAdapter
+import com.example.triviaapp.data.listPlayer
 import com.example.triviaapp.databinding.ActivityMainBinding
+import com.example.triviaapp.model.Player
 import javax.sql.DataSource
 
 class MainActivity : AppCompatActivity() {

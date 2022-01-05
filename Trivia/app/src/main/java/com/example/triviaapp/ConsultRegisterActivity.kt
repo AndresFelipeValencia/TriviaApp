@@ -3,6 +3,9 @@ package com.example.triviaapp
 import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
+import androidx.recyclerview.widget.RecyclerView
+import com.example.triviaapp.adapter.ItemAdapter
+import com.example.triviaapp.data.listPlayer
 import com.example.triviaapp.databinding.ConsultRegisterActivityBinding
 
 class ConsultRegisterActivity : AppCompatActivity() {
@@ -15,6 +18,13 @@ class ConsultRegisterActivity : AppCompatActivity() {
         binding = ConsultRegisterActivityBinding.inflate(layoutInflater)
 
         setContentView(binding.root)
+
+        val myDataset = listPlayer
+
+        val recyclerView = findViewById<RecyclerView>(R.id.list)
+        recyclerView.adapter = ItemAdapter(this, myDataset)
+
+        recyclerView.setHasFixedSize(true)
 
         binding.buttonReturn.setOnClickListener {
             onBackPressed()
