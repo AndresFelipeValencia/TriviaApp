@@ -1,3 +1,9 @@
 <resources>
     <string name="app_name">Trivia App</string>
+    <string name="button_register">View Logs</string>
+    <string name="button_star">Start Game</string>
+    <string name="number_level">Level #</string>
+    <string name="question_one">Question One</string>
+    <string name="end_game">End Game</string>
+    <string name="button_continue">Continue</string>
 </resources>
