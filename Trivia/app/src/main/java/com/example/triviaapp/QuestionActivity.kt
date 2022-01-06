@@ -2,13 +2,10 @@ package com.example.triviaapp
 
 import android.content.Intent
 import android.os.Bundle
-import android.widget.Button
-import android.widget.RadioButton
-import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
-import com.example.triviaapp.databinding.ActivityMainBinding
 import com.example.triviaapp.databinding.QuestionActivityBinding
 import com.example.triviaapp.model.Game
+import com.example.triviaapp.model.GameState
 
 class QuestionActivity : AppCompatActivity() {
 
@@ -21,13 +18,18 @@ class QuestionActivity : AppCompatActivity() {
 
         setContentView(binding.root)
 
-        val question = Game.actualGame?.getNextQuestion()
+        val game = Game.actualGame
 
-        binding.levelTitle.text = "Level: ${question?.level.toString()} Category ${question?.category?.name}"
+        val question = game?.getNextQuestion()
+
+        binding.levelTitle.text =
+            "Level: ${question?.level.toString()} Category ${question?.category?.name}"
 
         binding.questionOne.text = question?.question
 
-        question?.getQuestionsOption()?.forEachIndexed { index, option ->
+        val options = question?.getQuestionsOption()
+
+        options?.forEachIndexed { index, option ->
             when (index) {
                 0 -> binding.optionOne.text = option.option
                 1 -> binding.optionTwo.text = option.option
@@ -41,7 +43,25 @@ class QuestionActivity : AppCompatActivity() {
         }
 
         binding.buttonContinue.setOnClickListener {
-        }
+            val selectIndex = when (binding.options.checkedRadioButtonId) {
+                binding.optionOne.id -> 0
+                binding.optionTwo.id -> 1
+                binding.optionThree.id -> 2
+                binding.optionFour.id -> 3
 
+                else -> -1
+            }
+            val gameState = game?.validateQuestion(options!![selectIndex].id)
+
+            when (gameState) {
+                GameState.WON -> startActivity(Intent(this, GameCompletedActivity::class.java))
+                GameState.LOST -> startActivity(Intent(this, WrongAnswerActivity::class.java))
+                GameState.NEXT_QUESTIONS -> startActivity(Intent(this, ContinueActivity::class.java))
+                GameState.NEXT_LEVEL -> startActivity(Intent(this, QuestionActivity::class.java))
+                GameState.ENDED -> startActivity(Intent(this, EndGameActivity::class.java))
+                null -> TODO()
+            }
+        }
     }
+
 }

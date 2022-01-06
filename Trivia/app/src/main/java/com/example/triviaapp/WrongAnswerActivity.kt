@@ -17,7 +17,7 @@ class WrongAnswerActivity : AppCompatActivity() {
         setContentView(binding.root)
 
         binding.endGame.setOnClickListener {
-            startActivity(Intent(this, WrongAnswerActivity::class.java))
+            startActivity(Intent(this, MainActivity::class.java))
         }
 
     }
