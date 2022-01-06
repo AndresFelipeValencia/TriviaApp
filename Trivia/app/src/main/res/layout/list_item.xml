@@ -10,7 +10,8 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:paddingTop="16dp"
-        android:textAppearance="@style/TextAppearance.AppCompat"/>
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textSize="21sp"/>
 
     <TextView
         android:id="@+id/points_player"
@@ -18,5 +19,6 @@
         android:layout_width="0dp"
         android:layout_height="wrap_content"
         android:paddingTop="16dp"
-        android:textAppearance="@style/TextAppearance.AppCompat"/>
+        android:textAppearance="@style/TextAppearance.AppCompat"
+        android:textSize="21sp"/>
 </LinearLayout>

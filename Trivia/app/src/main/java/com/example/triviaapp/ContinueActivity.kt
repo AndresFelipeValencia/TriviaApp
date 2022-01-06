@@ -4,7 +4,6 @@ import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.triviaapp.databinding.ContinueActivityBinding
-import com.example.triviaapp.databinding.EndGameActivityBinding
 import com.example.triviaapp.model.Game
 
 class ContinueActivity : AppCompatActivity() {

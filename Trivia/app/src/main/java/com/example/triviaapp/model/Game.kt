@@ -9,13 +9,8 @@ class Game(private val levels: List<Level>)  {
     var totalPoint: Int = 0
     var currentQuestion: Int = 0
 
-    fun createLevel() {
-
-    }
-
-    fun getNextQuestion() : Question {
-        val question = levels [currentLevel].listQuestion [currentQuestion]
-        return question
+    fun getNextQuestion(): Question {
+        return levels[currentLevel].listQuestion[currentQuestion]
     }
 
     fun validateQuestion(userOptionSelectedId: Int) : GameState {

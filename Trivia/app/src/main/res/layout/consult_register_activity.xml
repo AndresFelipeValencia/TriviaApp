@@ -31,6 +31,6 @@
         android:layout_height="match_parent"
         android:scrollbars="vertical"
         app:layoutManager="LinearLayoutManager"
-        android:layout_marginTop="40dp"/>
+        android:layout_marginTop="40dp" />
 
 </LinearLayout>

@@ -21,7 +21,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/accumulated_points"
-        android:textSize="24sp"
+        android:textSize="25sp"
         android:layout_gravity="center"
         android:gravity="center"
         android:layout_marginTop="40dp"/>
@@ -34,7 +34,7 @@
         android:inputType="text"
         android:importantForAutofill="no"
         android:layout_marginTop="40dp"
-        android:textSize="20sp"/>
+        android:textSize="21sp"/>
 
     <Button
         android:id="@+id/save_data"

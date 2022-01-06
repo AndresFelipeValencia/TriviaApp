@@ -25,7 +25,7 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/question_one"
-            android:textSize="24sp"
+            android:textSize="25sp"
             android:layout_marginTop="30dp"
             android:layout_gravity="center"
             android:gravity="center"/>
@@ -84,7 +84,5 @@
         </LinearLayout>
 
     </LinearLayout>
-
-
 
 </ScrollView>

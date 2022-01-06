@@ -62,6 +62,6 @@ class QuestionActivity : AppCompatActivity() {
                 null -> TODO()
             }
         }
-    }
 
+    }
 }
