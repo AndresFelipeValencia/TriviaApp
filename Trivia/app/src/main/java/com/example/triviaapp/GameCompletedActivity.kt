@@ -21,7 +21,7 @@ class GameCompletedActivity : AppCompatActivity() {
         binding.saveData.setOnClickListener {
             val namePlayer = binding.name.text.toString()
             PlayerDataSource.addNewPlayer(namePlayer, Game.actualGame!!.totalPoint)
-            startActivity(Intent(this, MainActivity::class.java ))
+            startActivity(Intent(this, MainActivity::class.java))
         }
     }
 }

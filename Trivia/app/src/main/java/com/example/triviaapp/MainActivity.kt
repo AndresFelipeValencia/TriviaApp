@@ -23,7 +23,7 @@ class MainActivity : AppCompatActivity() {
 
         binding.start.setOnClickListener {
             Game.startGame()
-            startActivity(Intent(this, QuestionActivity::class.java ))
+            startActivity(Intent(this, QuestionActivity::class.java))
         }
 
     }
