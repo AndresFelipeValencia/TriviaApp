@@ -32,29 +32,29 @@
 
         <RadioGroup
             android:id="@+id/options"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="vertical"
             android:layout_marginTop="20dp">
 
             <RadioButton
                 android:id="@+id/option_one"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
             <RadioButton
                 android:id="@+id/option_two"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
             <RadioButton
                 android:id="@+id/option_three"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
             <RadioButton
                 android:id="@+id/option_four"
-                android:layout_width="wrap_content"
+                android:layout_width="match_parent"
                 android:layout_height="wrap_content" />
 
         </RadioGroup>
@@ -62,22 +62,24 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="match_parent"
-            android:layout_gravity="center"
+            android:layout_gravity="end"
             android:gravity="center"
-            android:orientation="vertical"
+            android:orientation="horizontal"
             android:layout_marginTop="40dp">
 
         <Button
             android:id="@+id/end_game"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/end_game" />
+            android:text="@string/end_game"
+            android:layout_margin="10dp"/>
 
         <Button
             android:id="@+id/button_continue"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="@string/button_continue" />
+            android:text="@string/button_continue"
+            android:layout_margin="10dp"/>
 
         </LinearLayout>
 

@@ -3,12 +3,8 @@ package com.example.triviaapp
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import androidx.recyclerview.widget.RecyclerView
-import com.example.triviaapp.adapter.ItemAdapter
-import com.example.triviaapp.data.listPlayer
 import com.example.triviaapp.databinding.ActivityMainBinding
-import com.example.triviaapp.model.Player
-import javax.sql.DataSource
+import com.example.triviaapp.model.Game
 
 class MainActivity : AppCompatActivity() {
 
@@ -26,6 +22,7 @@ class MainActivity : AppCompatActivity() {
         }
 
         binding.start.setOnClickListener {
+            Game.startGame()
             startActivity(Intent(this, QuestionActivity::class.java ))
         }
 

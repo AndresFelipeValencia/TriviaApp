@@ -1,16 +1,16 @@
 package com.example.triviaapp.model
 
-class Game() {
-    private val levels: MutableList<Level> = mutableListOf()
-    private var currentLevel: Int = 1
+import com.example.triviaapp.data.QuestionsDataSource
+
+const val GAME_LEVELS = 5
+
+class Game(private val levels: List<Level>)  {
+    private var currentLevel: Int = 0
     var totalPoint: Int = 0
-    private var currentQuestion: Int = 1
+    private var currentQuestion: Int = 0
 
     fun createLevel() {
 
-    }
-
-    fun startGame() {
     }
 
     fun getNextQuestion() : Question {
@@ -25,7 +25,7 @@ class Game() {
                 GameState.WON
             } else if ( currentQuestion == 5) {
                 currentLevel ++
-                currentQuestion = 1
+                currentQuestion = 0
                 GameState.NEXT_LEVEL
             } else {
                 currentQuestion ++
@@ -33,6 +33,17 @@ class Game() {
             }
         } else {
             GameState.LOST
+        }
+    }
+
+    companion object {
+        var actualGame : Game ? = null
+        fun startGame() {
+            val levels = mutableListOf<Level>()
+            for (i in 1..GAME_LEVELS) {
+                levels.add(Level(QuestionsDataSource.getQuestionByLevel(i)))
+            }
+            actualGame = Game(levels)
         }
     }
 
