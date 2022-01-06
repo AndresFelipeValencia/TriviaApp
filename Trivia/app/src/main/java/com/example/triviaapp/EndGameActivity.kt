@@ -18,6 +18,8 @@ class EndGameActivity : AppCompatActivity() {
 
         setContentView(binding.root)
 
+        binding.accumulatedPoints.text = Game.actualGame?.totalPoint?.toString()
+
         binding.name.setOnClickListener {
         }
 

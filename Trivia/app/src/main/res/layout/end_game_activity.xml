@@ -28,6 +28,15 @@
         android:layout_marginTop="30dp"/>
 
     <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/accumulated_points"
+        android:textSize="24sp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="30dp"/>
+
+    <TextView
         android:id="@+id/accumulated_points"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
