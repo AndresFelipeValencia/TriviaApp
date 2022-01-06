@@ -5,9 +5,9 @@ import com.example.triviaapp.data.QuestionsDataSource
 const val GAME_LEVELS = 5
 
 class Game(private val levels: List<Level>)  {
-    private var currentLevel: Int = 0
+    var currentLevel: Int = 0
     var totalPoint: Int = 0
-    private var currentQuestion: Int = 0
+    var currentQuestion: Int = 0
 
     fun createLevel() {
 
@@ -21,9 +21,10 @@ class Game(private val levels: List<Level>)  {
     fun validateQuestion(userOptionSelectedId: Int) : GameState {
         val question = levels [currentLevel].listQuestion [currentQuestion]
         return if (question.isOptionRight(userOptionSelectedId)) {
-            if (currentQuestion == 5 && currentLevel == 5) {
+            totalPoint += currentLevel.plus(1)
+            if (currentQuestion == getMaxLevel() && currentLevel == getMaxLevel()) {
                 GameState.WON
-            } else if ( currentQuestion == 5) {
+            } else if ( currentQuestion == getMaxLevel()) {
                 currentLevel ++
                 currentQuestion = 0
                 GameState.NEXT_LEVEL
@@ -35,6 +36,8 @@ class Game(private val levels: List<Level>)  {
             GameState.LOST
         }
     }
+
+    fun getMaxLevel() = GAME_LEVELS -1
 
     companion object {
         var actualGame : Game ? = null

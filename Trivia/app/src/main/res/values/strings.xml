@@ -7,7 +7,7 @@
     <string name="end_game">End Game</string>
     <string name="button_continue">Continue</string>
     <string name="title_message">Gracias por participar</string>
-    <string name="accumulated_points">Sus puntos acumulados son: #</string>
+    <string name="accumulated_points">Sus puntos acumulados son: </string>
     <string name="name_player">Ingrese su nombre: </string>
     <string name="save_data">Save Data</string>
     <string name="response_validation">Tu respuesta ha sido correcta</string>

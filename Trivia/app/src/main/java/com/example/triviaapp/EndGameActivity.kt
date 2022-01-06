@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.example.triviaapp.data.PlayerDataSource
 import com.example.triviaapp.databinding.EndGameActivityBinding
+import com.example.triviaapp.model.Game
 
 class EndGameActivity : AppCompatActivity() {
 
@@ -22,7 +23,7 @@ class EndGameActivity : AppCompatActivity() {
 
         binding.saveData.setOnClickListener {
             val namePlayer = binding.name.text.toString()
-            PlayerDataSource.addNewPlayer(namePlayer, point = 1)
+            PlayerDataSource.addNewPlayer(namePlayer, Game.actualGame!!.totalPoint)
             startActivity(Intent(this, MainActivity::class.java))
         }
     }

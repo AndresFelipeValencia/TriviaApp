@@ -35,6 +35,7 @@
         </activity>
 
         <activity
+            android:windowSoftInputMode="adjustPan|adjustResize"
             android:name=".WrongAnswerActivity"
             android:exported="true">
         </activity>

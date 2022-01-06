@@ -23,7 +23,7 @@ class QuestionActivity : AppCompatActivity() {
         val question = game?.getNextQuestion()
 
         binding.levelTitle.text =
-            "Level: ${question?.level.toString()} Category ${question?.category?.name}"
+            "Level: ${question?.level.toString()} Category ${question?.category?.name} ${game?.currentQuestion?.plus(1)}/5"
 
         binding.questionOne.text = question?.question
 
@@ -57,7 +57,7 @@ class QuestionActivity : AppCompatActivity() {
                 GameState.WON -> startActivity(Intent(this, GameCompletedActivity::class.java))
                 GameState.LOST -> startActivity(Intent(this, WrongAnswerActivity::class.java))
                 GameState.NEXT_QUESTIONS -> startActivity(Intent(this, ContinueActivity::class.java))
-                GameState.NEXT_LEVEL -> startActivity(Intent(this, QuestionActivity::class.java))
+                GameState.NEXT_LEVEL -> startActivity(Intent(this, ContinueActivity::class.java))
                 GameState.ENDED -> startActivity(Intent(this, EndGameActivity::class.java))
                 null -> TODO()
             }

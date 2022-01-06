@@ -17,14 +17,34 @@
         android:layout_marginTop="15dp"/>
 
     <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/accumulated_points"
+        android:textSize="30sp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="30dp"/>
+
+    <TextView
         android:id="@+id/accumulated_points"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:text="@string/accumulated_points"
-        android:textSize="24sp"
+        android:textSize="40sp"
         android:layout_gravity="center"
         android:gravity="center"
-        android:layout_marginTop="40dp"/>
+        android:layout_marginTop="30dp"
+        android:textStyle="bold"/>
+
+    <TextView
+        android:id="@+id/level"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/accumulated_points"
+        android:textSize="40sp"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:layout_marginTop="30dp"/>
 
     <Button
         android:id="@+id/button_continue"
@@ -33,6 +53,6 @@
         android:text="@string/button_continue"
         android:layout_gravity="center"
         android:textSize="15sp"
-        android:layout_marginTop="40dp"/>
+        android:layout_marginTop="30dp"/>
 
 </LinearLayout>
